@@ -1,1 +1,23 @@
 Namaste react
+
+# Parcel
+Dev Build
+HPM -Hot Module Replacement
+Local Server
+File Watching Algorithms
+Caching
+Image Optimization
+Bundling
+Compressing
+Consistent Hashing
+Code Spliting
+Differential Bundling- Support older versions
+Diagnostics
+Error Handling
+HTTPS
+Tree Shaking - Remove Unused Code
+Different dev and production bundle
+
+# Pacel.org
+
+# browserslist.dev

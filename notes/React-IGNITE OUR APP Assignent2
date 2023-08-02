@@ -1,0 +1,126 @@
+1. what is npm?
+
+npm : It is a package manager for Javascript programming langugage.
+It is used to manage and distribute open source javascript libraries and tools.
+
+  . Installing Packages
+  . Managing Dependencies
+  . Version Management
+  . Publishing Packages
+  . Searching Packages
+  . Uninstalling Packages
+  . Updating Packages
+  . Scripts
+  
+2. what is parcel/webpack? why did you need it?
+Parcel and Webpack are both module bundlers used in modern web development to manage and bundle various assets, such as JavaScript files, CSS files, images, and more. They help streamline the development process by optimizing the loading and delivery of these assets to web browsers. While they serve a similar purpose, they have different approaches and features.
+
+   .Dev Build
+   .HPM -Hot Module Replacement
+   .Local Server
+   .File Watching Algorithms
+   .Caching
+   .Image Optimization
+   .Bundling
+   .Compressing
+   .Consistent Hashing
+   .Code Spliting
+   .Differential Bundling- Support older versions
+   .Diagnostics
+   .Error Handling
+   .HTTPS
+   .Tree Shaking - Remove Unused Code
+   .Different dev and production bundle
+   
+3. what is .parcel cache?
+..parcel-cache directory is a directory used to store cached data and compiled assets generated during the build process. It helps to speed up subsequent builds by reusing previously compiled assets and avoiding redundant work. The .parcel-cache directory is automatically created by Parcel in the root of your project when you run the Parcel build command.
+
+  .Caching Compiled Asset
+  .Cache Invalidation
+  .Dependency Management
+  .Cleaning Cache
+
+4.  what is difference between dependencies and devDependencies?
+
+Dependencies: Dependencies are packages that are required for your project to run correctly in a production environment. These are the packages that your application relies on to function as intended when it's being used by end-users
+
+npm install <package-name> --save
+
+devDependencies: devDependencies are packages that are only needed during development and testing of your project. They are not required for the actual production use of your application. This could include tools for testing, bundling, transpiling, code linting, and more. devDependencies help you manage the development workflow, ensure code quality, and automate various tasks.
+  
+npm install -D <package-name> --save  
+
+5. what is tree shaking?
+It refers to the process of eliminating or "shaking off" unused or dead code from a program, with the goal of reducing the size of the final output bundle or executable.
+
+ .Reduced File Size
+ .Performance
+ .Efficiency
+ .Performance
+ 
+6. what is hot module replacement?
+ Hot Module Replacement (HMR) is a development technique used in web development, particularly with technologies like JavaScript, React, and webpack. It allows developers to update the application's code in real-time while the application is running, without requiring a full page reload or losing the application's state. HMR enhances the development experience by making it faster and more efficient to see changes in the code reflected immediately in the browser.
+ 
+  .Detecting Changes
+  .Module Replacement
+  .Preserving State
+  .Minimal Disruption
+  
+7. List down 5 super powers of parcel. List down 3 with words
+   .Dev Build
+   .HPM -Hot Module Replacement
+   .Local Server
+   .File Watching Algorithms
+   .Caching 
+   
+Hot Module Replacement (HMR) is a development technique used in web development, particularly with technologies like JavaScript, React, and webpack. It allows developers to update the application's code in real-time while the application is running, without requiring a full page reload or losing the application's state. HMR enhances the development experience by making it faster and more efficient to see changes in the code reflected immediately in the browser.
+ 
+  .Detecting Changes
+  .Module Replacement
+  .Preserving State
+  .Minimal Disruption
+  
+Tree Shaking
+   refers to the process of eliminating or "shaking off" unused or dead code from a program, with the goal of reducing the size of the final output bundle or executable
+   
+Code spiliting 
+
+8. What is .gitignore ? what we should add and not add into it ?
+
+.gitignore is a file that can ignore all unwanted files and modules commiting to git.
+
+example: dist, nodemodules are ignored to commit in git which can be generated from package.json
+
+9.what is difference between package.json and package-lock.json?
+
+package.json defines the project's metadata, dependencies, and scripts, 
+
+package-lock.json serves as a lockfile that provides an exact snapshot of the dependency tree to ensure consistent and reproducible installations across different environments. 
+It's a good practice to include both files in your version control system to ensure that all team members are using the same dependency versions and that the project can be reliably built and executed.  
+
+10. why we should not modify package-lock.json?
+
+
+package-lock.json is generated automatically by npm (Node Package Manager) when you install or update dependencies in your project. It serves as a lockfile that records the exact versions of each dependency, along with their sub-dependencies, that are currently installed in your project. This lockfile is used to ensure that your project's dependencies are consistent and reproducible across different development environments
+
+.Consistency and Reproducibility
+.Dependency Resolution
+.Collaboration
+.Updates and Installation
+.Future Maintenance
+
+11. what is node_modules? Should I push it to git?
+
+when you excute the command npm install index.html. All the nodemodules will be generated.
+It can be generated from package.json. As node-modules are huge we should not commit to git as it is generated from package.json
+
+12.what is dist folder?
+
+when you execute the command npx parcel build index.html
+New dist folder will be created.
+
+Minified and Bundled Code: JavaScript, CSS, and other code files are often minified (compressed) and bundled together to reduce file sizes and improve loading times. This is particularly important for optimizing performance in production environments.
+
+13. what is browserlist?
+
+Browserslist, you ensure that your web application is optimized for the specific browsers and environments that are important for your project. It helps you avoid unnecessary polyfills and ensures that your code remains compatible with the targeted audience.
