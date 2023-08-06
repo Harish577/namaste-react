@@ -4,6 +4,8 @@
   "description": "\"this is namaste react by harish pidugu\"",
  
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "just"
   },
   "repository": {

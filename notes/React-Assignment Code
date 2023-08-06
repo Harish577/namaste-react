@@ -1,0 +1,47 @@
+1. JSX?
+
+JSX:
+
+
+JSX stands for "JavaScript XML," and it's a syntax extension used primarily with React, a popular JavaScript library for building user interfaces. JSX allows you to write HTML-like code within your JavaScript code, making it easier to define the structure and layout of components in your application.
+
+
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Hello, JSX!</h1>
+      <p>This is an example of JSX in action.</p>
+    </div>
+  );
+};
+
+export default App;
+
+
+Here, we called App as functional component, Similarly like html we have div,h1,p tags. But they actually transformed into react code when compiled.
+
+
+2. Super powers of JSX:
+
+   1. Readability and Familarity
+   2. Declarative Syntax
+   3. Component Syntax
+   4. JavaScript Integration
+   5. Tooling support
+   6. Consistency
+   7. Community and Resources
+   8. Ecosystem Support
+   9. Static Type checking
+   10. Enhanced Developer Experience
+   
+3. Use <TitleComponent/>  
+   when you want to indicate that the component is self-closing.
+   Use <TitleComponent>  -opening tag
+   Use </TitleComponent> -closing Tag
+   if you're following HTML-style syntax and want to use separate opening and closing tags.   
+   
+4. Role of type:
+
+   Type attribute in the <script> tag is used to specify the scripting language used within the script block. It tells the browser how to interpret the content of the script element. The type attribute is optional, but it's a good practice to include it to ensure that browsers interpret your code correctly.

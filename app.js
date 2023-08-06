@@ -3,27 +3,46 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "I am Java Script Expert :)"),
-    React.createElement("h2", {}, "I am H2 Tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h3", {}, "I am H3 Tag"),
-    React.createElement("h6", {}, "I am H4 Tag"),
-  ]),
-]);
+//React.createElement => object => html render
+//JSX => React.creatElement=> object => html render
+//JSX is html like or xml like pattern
+//JSX transpiled before reaching javascript(parcel)-babel
+//const heading = React.createElement("h1", { id: "heading" }, "Namaste React");
 
-console.log(parent);
+// Jsx is camel case
 
-//JSX
+//React Element
+const jsxheading = <h1 className="head">"Namaste React"</h1>;
 
-//CROSS ORIGIN
+//React Component
+//Class Based Componet -OLD
+//Functional Component - NEW
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading", xyz: "abc" },
-  "Hello World From React"
+const Title = () => (
+  <div id="titlecontainer">
+    {element}
+    <h1>Namaste React Title Functional Component</h1>
+  </div>
 );
-const root = ReactDOM.createRoot(document.getElementById("hello"));
-root.render(parent);
+
+const number =100;
+
+const element = <span>React Element</span>
+
+// React Functional Component
+//Component Composition
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+     {Title()}
+      <Title></Title>  
+      <Title />
+      <h1>Namaste React Functional Component<h4 id = "inner">{number}</h4></h1>
+    </div>
+  );
+};
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComponent />);

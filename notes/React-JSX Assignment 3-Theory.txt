@@ -1,0 +1,176 @@
+1.JSX:
+
+
+JSX stands for "JavaScript XML," and it's a syntax extension used primarily with React, a popular JavaScript library for building user interfaces. JSX allows you to write HTML-like code within your JavaScript code, making it easier to define the structure and layout of components in your application.
+
+
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Hello, JSX!</h1>
+      <p>This is an example of JSX in action.</p>
+    </div>
+  );
+};
+
+export default App;
+
+
+Here, we called App as functional component, Similarly like html we have div,h1,p tags. But they actually transformed into react code when compiled.
+
+
+
+const App = () => {
+  return React.createElement(
+    'div',
+    null,
+    React.createElement('h1', null, 'Hello, JSX!'),
+    React.createElement('p', null, 'This is an example of JSX in action.')
+  );
+};
+
+Babel is javascript compiler which used to convert JSX syntax into regular javascript.
+
+
+2. React.createElement vs JSX?
+
+React and JSX are related concepts, but they serve different purposes in the context of building user interfaces in JavaScript applications.
+
+JSX is a syntax extenstion for javascript that allows you to write the javascript code.
+
+It provides a more readable and instritive way to define the structure and composition of UI code.
+
+
+React:
+
+It is developed by facebook developers. It allows developers to create reusable components that efficiently update based on changes in application state.
+
+React uses virtual dom to optimize the rendering performance.
+
+
+3. Benefits of JSX:
+
+1. Readability and Familarity
+2. Declarative Syntax
+3. Component Syntax
+4. JavaScript Integration
+5. Tooling support
+6. Consistency
+7. Community and Resources
+8. Ecosystem Support
+
+
+4. Behind the scenes of JSX:
+
+
+    1. Babel Transpilation: JSX is not directly understood by browsers, so it needs to be converted into regular JavaScript. This is where tools like Babel come into play. Babel is a popular JavaScript compiler that can transpile JSX code into plain JavaScript.
+
+   2.React.createElement Calls: 
+    During transpilation, JSX tags are transformed into React.createElement calls. These calls create React elements that represent the virtual DOM nodes
+
+  3.Virtual DOM Representation: 
+    React elements are used to build a virtual DOM tree, which is a lightweight representation of the actual DOM. This virtual DOM allows React to efficiently compare the previous and current states of components and determine the minimum number of changes needed to update the real DOM.
+
+  4.Reconciliation and Rendering
+
+   When there's a state or prop change in a React component, React performs a process called reconciliation. It compares the previous virtual DOM with the updated virtual DOM and identifies the differences (referred to as the "diff"). Then, it calculates the minimal set of changes required to update the actual DOM accordingly.
+
+  5.DOM Update: 
+   After calculating the differences, React updates the real DOM with the necessary changes. This process is highly optimized, and only the parts of the DOM that have changed are updated.
+
+5. Barbel and parcel role in JSX.
+
+   Barbel: It is a javascript compiler which convert JSX into a version that compatible with older and newer versions.
+   
+   1.JSX Trasformation
+   2.React Trasformations
+   3.Configurability
+   
+   Parcel: It is a popular web application bundler that simplifies the process of building modern web application. It is know as zero-config approach.
+   It handles tasks like bundling, minification and transformation for you.
+   
+   Build Process
+   Hot Module Replacement
+   
+6. Components
+
+Functional Components: Functional components are defined as JavaScript functions. They take in props (short for properties) as input and return JSX elements to describe what should be rendered. Functional components are simple and focused on rendering UI based on the provided props.
+
+
+
+Functional Components:  
+
+
+import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+
+export default Counter;
+
+
+Class components:
+
+  class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Increment
+        </button>
+      </div>
+    );
+  }
+}
+
+   
+Props: Props are mechanism for passing data from a parent to child component.They are read only and help make components reusable and dynamic.
+
+State: It represents the internal data of a component. It is used to manage data that can change over time and influence the rendering of a component.
+
+
+7.Composing Componets:
+
+   React components can be composed together to create complex user interfaces. This composability encourages a modular and reusable code structure.
+   
+   const Title = () => (
+  <div id="titlecontainer">
+    {element}
+    <h1>Namaste React Title Functional Component</h1>
+  </div>
+   );
+   
+   
+   const HeadingComponent = () => {
+    return (
+    <div id="container">
+     {Title()}
+      <Title></Title>  
+      <Title />
+      <h1>Namaste React Functional Component<h4 id = "inner">{number}</h4></h1>
+    </div>
+  );
+};
+
+
+
+                
+  
+
+
