@@ -1,0 +1,59 @@
+#heading {
+
+    color: yellowgreen
+}
+
+#child {
+    color: red
+}
+
+#container {
+    color: red
+}
+
+#titlecontainer {
+    color: yellowgreen
+}
+
+#inner {
+    color: bisque
+}
+
+#h1 {
+    color: blue;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+#h2 {
+    color: green;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+#left-aligned-log {
+    text-align: left;
+  } 
+
+
+.search-container {
+    text-align: center;
+}
+
+.user_icon {
+    text-align: right;
+}
+
+#search {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}  
+
+#search-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}  
