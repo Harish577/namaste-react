@@ -23,7 +23,7 @@ const TitleComponent = () => {
 const HeaderComponent = () => {
   return (
     <div id="headerpart">
-      <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Sample Image" />  
+        <img className="rest-logo" src={require('../images/flag.png')} alt="Sample Image" /> 
     </div>
   );
 };

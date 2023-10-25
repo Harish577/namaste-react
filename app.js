@@ -46,3 +46,18 @@ const HeadingComponent = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<HeadingComponent />);
+
+
+
+
+//HeaderComponent
+   //--- Logo
+   //---Nav Items
+//Body
+ //--- Search Component
+ //-- Restaurant Container
+ // --- Restaurant Card
+//Footer
+  //-copy writer
+  //-links
+  //--contact, Address
