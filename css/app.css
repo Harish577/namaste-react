@@ -4,8 +4,17 @@
   border: 1px solid black;
 }
 
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
 .logo {
-  width: 1000%;
+  width: 900px;
+  height: 120px;
 }
 
 .nav-items {
@@ -62,4 +71,9 @@
   text-align: left;
   display: flex;
   flex-wrap: wrap;
+}
+
+.filter-btn{
+  margin: 10px;
+  padding: 5px;
 }
