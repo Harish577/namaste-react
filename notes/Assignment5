@@ -1,0 +1,132 @@
+1.what is difference between named export, default export and * in react.js?
+
+Named exports allow you to export multiple values with specific names
+Default exports allow you to export a single value as the default, 
+* when importing allows you to import all the exports from a module into a single
+
+In the above code * is used 
+ex: 
+import all predifined modules
+
+Default Export: In code we exported RestaurantCard as default export
+Named Export : In the code we exported mocked restaurant data as named export,
+In constant.js we added all the urls
+
+2. what is config.js file?
+
+Environment Configuration:
+
+React applications can be developed and deployed in various environments, such as development, testing, staging, and production. Each environment may have different configurations, such as API endpoints, database connections, authentication keys, and debugging settings.
+A config.js file can be used to define these environment-specific variables in one place, making it easier to switch between environments and avoid hardcoding values directly into your code.
+
+Security:
+
+Storing sensitive information like API keys or secret tokens directly in your code is not secure. A config.js file can help by allowing you to keep such sensitive data outside of your version control system (e.g., Git). This enhances security and reduces the risk of accidentally exposing sensitive information.
+Maintainability:
+
+As your project grows, the number of configurations and environment variables may increase. Managing these in a central config.js file makes it easier to maintain and update these settings as your project evolves.
+Cross-Platform Compatibility:
+
+Having a dedicated configuration file allows you to share configuration settings across different platforms or parts of your application, such as the front-end and back-end. This can be especially useful in full-stack applications.
+Build and Deployment Automation:
+
+Configurations are often used during the build and deployment process. Tools like Webpack or other build systems can utilize the values defined in the config.js file to optimize your application for different environments or perform other tasks, such as code minification or versioning.
+Code Reusability:
+
+Centralizing configurations in a config.js file can promote code reusability. The same configuration settings can be used in multiple parts of your application without duplicating values
+
+3. what are react hooks?
+
+Hooks make it easier to reuse stateful logic, manage component side-effects, and simplify the development of functional components. Some of the most commonly used React hooks include
+
+we have 2 hooks:
+
+1. useState
+2. useEffect
+
+
+useState:
+
+useState allows functional components to manage local component state.
+It returns an array with two elements: the current state value and a function to update it
+
+ex:
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+useEffect:
+
+useEffect allows you to perform side-effects in your components, such as data fetching, DOM manipulation, or subscriptions.
+It takes two arguments: a function to run the side effect and an array of dependencies that determine when the effect should run
+
+import React, { useState, useEffect } from 'react';
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(seconds + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [seconds]);
+
+  return <p>Elapsed time: {seconds} seconds</p>;
+}
+
+
+useContext:
+
+eContext allows you to access the context of a parent component without having to pass props down the component tree.
+It takes a context object created by React.createContext
+
+import React, { useContext } from 'react';
+import MyContext from './MyContext';
+
+function MyComponent() {
+  const value = useContext(MyContext);
+  return <p>Value from context: {value}</p>;
+}
+
+
+useReducer:
+
+useReducer is a hook for managing complex state logic with a reducer function.
+It is typically used when you have state that depends on the previous state and actions to update that state
+
+import React, { useReducer } from 'react';
+
+function counterReducer(state, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    case 'DECREMENT':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(counterReducer, { count: 0 });
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
+      <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+    </div>
+  );
+}
