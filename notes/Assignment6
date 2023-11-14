@@ -1,0 +1,91 @@
+1. what is microservice?
+
+A microservice is a software architectural style that structures an application as a collection of small, independent services, each focused on a specific business capability. Instead of building a monolithic application where all functionality is tightly integrated into a single codebase, microservices break down the application into a set of smaller, loosely coupled services that can be developed, deployed, and scaled independently.
+
+
+Key Features:
+
+1. Independence
+2. Decentrialized Data Management
+3. Resilience
+4. Scalibility
+5. Technology Diversity
+6. CI/CD
+7. Flexibility
+
+2. what is monolithic Archiecture?
+
+Monolithic architecture is an alternative software architectural style that contrasts with the microservices architecture. In a monolithic application, all the components and functions of the software are tightly integrated into a single codebase and run as a single, indivisible unit. In other words, the entire application is developed, deployed, and scaled as a single, unified system.
+
+3. Difference between monolithic and microservice archiecture?
+
+Microservices architecture and monolithic architecture are two distinct approaches to designing and structuring software systems. Here are the key differences between the two:
+
+1. Architecture:
+Monolithic: In a monolithic architecture, the entire application is developed as a single, tightly integrated unit. All components and modules are part of the same codebase.
+Microservices: Microservices architecture decomposes the application into a collection of small, independent services. Each service is a separate, deployable unit that operates independently.
+2. Size and Scope:
+Monolithic: The application is a single, large codebase, covering all aspects of functionality, often resulting in a larger and more complex codebase.
+Microservices: Services are smaller and focused on specific business capabilities. Each microservice addresses a specific functionality or feature.
+3. Development and Deployment:
+Monolithic: Development, testing, and deployment of the entire application are done as a single unit.
+Microservices: Services can be developed, tested, and deployed independently, allowing for more flexibility and agility in the development process.
+4. Scaling:
+Monolithic: Scaling involves replicating the entire application, even if only a specific component requires additional resources.
+Microservices: Scaling is more granular, allowing individual services to be scaled independently based on their specific needs.
+5. Technology Stack:
+Monolithic: Typically uses a single technology stack and programming language for the entire application.
+Microservices: Each service can use its own technology stack and programming language, based on the requirements of that service.
+6. Communication:
+Monolithic: Communication between components is usually direct method or function calls within the same codebase.
+Microservices: Communication between services is typically done through APIs, often over a network, and can involve technologies like HTTP/REST or messaging protocols.
+7. Fault Isolation:
+Monolithic: A failure in one part of the application can potentially impact the entire system.
+Microservices: Services operate independently, so a failure in one service does not necessarily affect others.
+8. Updates and Deployments:
+Monolithic: Updating or deploying a new version of the application involves the entire codebase.
+Microservices: Updates can be done selectively, focusing on specific services, allowing for more flexibility and reduced impact on the overall system.
+9. Complexity:
+Monolithic: Simplicity in development but can become complex and hard to maintain as the application grows.
+Microservices: Increased complexity in terms of service communication and coordination, but each service can be more manageable.
+The choice between microservices and monolithic architecture depends on factors like the size and nature of the project, development team expertise, scalability requirements, and the desired level of flexibility and agility in development and deployment processes
+
+4. why do need a useEffect Hook?
+the useEffect hook is used to handle side effects in functional components. Side effects are operations or code that affect things outside the scope of the current function, such as data fetching, subscriptions, manual DOM manipulations, or interactions with APIs.
+
+1. Data Fetching:
+2. Component Lifecycle Events
+3. Event Listeners
+4. Fault Isolation
+
+5. what is Optional Chaning ?
+
+Optional chaining is a feature in JavaScript that simplifies the process of accessing nested properties of objects without having to explicitly check if each level of the property chain exists. It helps to avoid errors like "cannot read property 'x' of undefined" when dealing with nested objects or arrays.
+
+6. what is Shimmer UI?
+
+Shimmer UI is a technique used in user interface (UI) design to provide a visual indication of content loading or a placeholder for content that is yet to be loaded. It is often used to enhance the user experience by giving users feedback about ongoing background processes, such as data fetching, without leaving the interface blank or unresponsive.
+
+7. what is the difference between JS Expression and JS Statement?
+
+While expressions produce values, statements carry out actions and control the flow of the program.
+
+8.what is conditional rendering?
+
+In the code, if listofrestaraunts is empty we are rendering shimmer ui, it is example of conditional rendering
+
+9.what is cors?
+
+CORS is essential for securing web applications while allowing them to access resources from different domains. It plays a crucial role in preventing malicious websites from making unauthorized requests on behalf of users.
+
+10. what is async and await?
+
+async and await are keywords in JavaScript used to work with asynchronous code, making it more readable and easier to handle. They were introduced in ECMAScript 2017 (ES8) and are commonly used with functions that return promises.
+
+async Function:
+The async keyword is used to define a function as asynchronous. An asynchronous function always returns a promise, and the async keyword allows you to use the await keyword within the function.
+
+
+11. what is the use of 'const json = await data.json() in getRestaraunts?
+
+const json = await response.json(): Once the response is received, this line uses the json method of the Response object to extract and parse the JSON data. This method also returns a Promise, which is why the await keyword is used. The parsed JSON data is then stored in the json variable.
